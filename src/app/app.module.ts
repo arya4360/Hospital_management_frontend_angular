@@ -10,15 +10,13 @@ import {FormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ShowPatientsComponent } from './show-patients/show-patients.component';
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
-import { PatientLoginComponent } from './patient-login/patient-login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponent,
-    PatientDashboardComponent,
-    PatientLoginComponent
+    PatientDashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ export class PatientDashboardComponent implements OnInit {
   constructor(private service: PatientRegistrationService) { }
 
   ngOnInit(): void {
+    const res = this.service.login(this.patientLoginData);
   }
 
 }
