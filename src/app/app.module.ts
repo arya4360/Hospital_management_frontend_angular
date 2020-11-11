@@ -1,18 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule , routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import {PatientRegistrationService} from './patient-registration.service';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { ShowPatientsComponent } from './show-patients/show-patients.component';
+import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
+import { PatientLoginComponent } from './patient-login/patient-login.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    routingComponent,
+    PatientDashboardComponent,
+    PatientLoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [PatientRegistrationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
